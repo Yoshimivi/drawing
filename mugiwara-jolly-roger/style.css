@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(59, 82, 116);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 50vmin;
+  height: 50vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bones1,
+.bones2 {
+  content: '';
+  width: 6.5vmin;
+  height: 50vmin;
+  background: white;
+  position: absolute;
+  border: 1vmin solid black;
+}
+
+.bones1::after,
+.bones2::after {
+  content: '';
+  position: inherit;
+  width: 4.6vmin;
+  height: 50vmin;
+  background: white;
+  top: -1vmin;
+  left: -1px;
+}
+
+.bones1 {
+  transform: rotate(45deg);
+  z-index: -2;
+}
+
+.bones2 {
+  transform: rotate(-45deg);
+  z-index: -2
+}
+
+.roundTop {
+  width: 8.5vmin;
+  height: 8.5vmin;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: -5.4vmin;
+  left: -5vmin;
+  border: 1vmin solid black;
+}
+
+.roundTop::before,
+.roundTop::after {
+  content: '';
+  width: 6.5vmin;
+  height: 6.5vmin;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+
+.roundTop::before {
+  top: -1vmin;
+  left: 5vmin;
+  border: 1vmin solid black;
+}
+
+.roundTop::after {
+  top: 0vmin;
+  left: 0vmin;
+}
+
+.roundBottom {
+  width: 8.5vmin;
+  height: 8.5vmin;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 45vmin;
+  left: -5vmin;
+  border: 1vmin solid black;
+}
+
+.roundBottom::before,
+.roundBottom::after {
+  content: '';
+  width: 6.5vmin;
+  height: 6.5vmin;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+
+.roundBottom::before {
+  top: -1vmin;
+  left: 5vmin;
+  border: 1vmin solid black;
+}
+
+.roundBottom::after {
+  top: 0vmin;
+  left: 0vmin;
+}
+
+.skull {
+  width: 25vmin;
+  height: 25vmin;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 7vmin;
+  left: 12.7vmin;
+  border: 1vmin solid black;
+}
+
+.eyes {
+  width: 7vmin;
+  height: 7vmin;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 12vmin;
+  left: 3vmin;
+  box-shadow: 10vmin 0 black;
+}
+
+.nose {
+  width: 2.7vmin;
+  height: 2vmin;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 20vmin;
+  left: 10vmin;
+}
+
+.mouth {
+  width: 19vmin;
+  height: 22vmin;
+  background: white;
+  position: absolute;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  top: 15vmin;
+  left: 2vmin;
+  border: 1vmin solid rgb(0, 0, 0);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.mouth::before,
+.mouth::after {
+  width: 30vmin;
+  height: 15vmin;
+  content: '';
+  position: absolute;
+  border: 1vmin solid black;
+  border-radius: 0 0 15vmin 15vmin;
+}
+
+.mouth::before {
+  top: -2vmin;
+  left: -7.5vmin;
+}
+
+.mouth::after {
+  top: -5.5vmin;
+  left: -7.5vmin;
+}
+
+.teeth,
+.teeth::before,
+.teeth::after {
+  width: 1vmin;
+  height: 10vmin;
+  background: black;
+  position: absolute;
+}
+
+.teeth {
+  top: 4.3vmin;
+  left: 8.1vmin;
+}
+
+.teeth::before {
+  content: '';
+  top: -0.5vmin;
+  left: 4.8vmin;
+  transform: rotate(-10deg);
+}
+
+.teeth::after {
+  content: '';
+  top: -0.5vmin;
+  left: -5.2vmin;
+  transform: rotate(10deg);
+}
+
+.hat {
+  width: 100%;
+  height: 12.5vmin;
+  position: relative;
+  top: -12vmin;
+}
+
+.top {
+  width: 25vmin;
+  height: 12.5vmin;
+  background: rgb(255, 208, 0);
+  position: absolute;
+  border-radius: 12.5vmin 12.5vmin 0 0;
+  left: 12.6vmin;
+  overflow: hidden;
+}
+
+.top::after {
+  content: '';
+  width: 23.2vmin;
+  height: 12.7vmin;
+  position: absolute;
+  border-radius: 12.5vmin 12.5vmin 0 0;
+  border: 1vmin solid black;
+  left: -0.1vmin;
+}
+
+.red {
+  width: 25vmin;
+  height: 5.3vmin;
+  background: red;
+  position: absolute;
+  border-top: 1vmin solid black;
+  bottom: 1.5vmin;
+}
+
+.brim {
+  width: 40vmin;
+  height: 2.8vmin;
+  background: rgb(255, 208, 0);
+  position: absolute;
+  left: 5vmin;
+  bottom: 0;
+  border: 1vmin solid black;
+  border-radius: 1.4vmin;
+}
